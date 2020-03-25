@@ -1,0 +1,68 @@
+/*
+Rota / Recurso - rotas direciona para um recurso criado no back-end 
+
+Metodos HTTP:
+GET: Buscar uma informação do back-end
+POST: Criar uma informação no back-end 
+PUT:Alterar uma informação no back-end
+DELETE:Deletar uma informação no back-end
+
+executar servidor node - node nomedoarquivo.extensao ex: node index.js
+
+Tipos de parametros:
+
+QUERY: paramentros nomeados enviados na rota apos "?" (filtros, paginação)
+pegar um paramentro vindo da url com method get
+app.get('/user', (request, response) => {
+    const params = request.query;
+    console.log(params);
+
+    return response.json({
+        nome: 'semana omnistack',
+        aluno: 'Diego antoni'
+    });
+});
+===============================//====================
+
+ROUTE PARAMS: paramentros utilizados para identificar recursos
+utilizaçao:
+app.get('/user/:id', (request, response) => {
+    const params = request.params;
+    console.log(params);
+
+    return response.json({
+        nome: 'semana omnistack',
+        aluno: 'Diego antoni'
+    });
+});
+paramentro na url http://localhost:3333/user/1
+
+=====================//=========================
+REQUEST BODY: corpo da requisição, utilizado para criar ou alterar recursos
+nao esquece de informa na aplicação que tipo de formato sera json com o parametro antes 
+das rotas: app.use(express.json());
+
+app.post('/user', (request, response) => {
+    const body = request.body;
+    console.log(body);
+
+    return response.json({
+        nome: 'semana omnistack',
+        aluno: 'Diego antoni'
+    });
+});
+
+*/
+
+/* 
+===============\BANCO DE DADOS/====================
+SQL(bancos relacional): MYSQL, SQLITE, POSTGRESQL, ORACLE, MICROSOFT SQL SERVER
+NOSQL(bancos nao relacional): MONGODB, COUCHDB, ETC
+*/
+
+/* formas de comando para utilizar na aplicaçaõ
+Driver(forma padrao): select *from users
+
+QUERY BUILDER(utilizando recurso da linguagem): table('users').select('*').where()
+query builder q sera utilizado sera o knex.js
+*/

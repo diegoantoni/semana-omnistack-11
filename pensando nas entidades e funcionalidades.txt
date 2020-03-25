@@ -1,0 +1,13 @@
+Entidades - tudo que sera armazenado no banco
+ong
+caso(incident)
+
+Funcionalidades da aplicação
+. login
+. logout de ong
+. cadastro de ong
+. cadastrar novos casos
+. deleta casos
+. listar casos especificos de uma ong
+. lista todos os casos
+. entrar em contato com a ong
